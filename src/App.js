@@ -17,12 +17,13 @@ const App = () => {
 
 const getData  = async () => {
   const result = await Axios.get(url);
-  console.log(result)
+  setRecipes(result.data.hits);
+  console.log(result);
   setQuery("");
 };
 
 
-const onChange = (e) => {
+const onChange = e => {
   setQuery(e.target.value)
 };
 
@@ -39,6 +40,10 @@ const onSubmit = (e) => {
         <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
         <input type="submit" value="search"/>
       </form>
+      <div className="recipes">
+        {recipes !==[] &&
+          recipes.map(recipe => <h2>recipe.recipe.label</h2>)}
+    </div>
     </div>
   )
 }
