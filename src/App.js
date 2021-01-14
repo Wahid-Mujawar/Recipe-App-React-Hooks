@@ -1,5 +1,6 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import './App.css';
+import Axios from 'axios';
 
 
 const App = () => {
@@ -11,6 +12,10 @@ const App = () => {
   const url =
 `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
 
+const getData  = async () => {
+  const result = await Axios.get(url);
+  console.log(result)
+}
 
   return (
     <div className="App">
