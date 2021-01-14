@@ -5,6 +5,7 @@ import Axios from 'axios';
 
 const App = () => {
   const[query, setQuery] = useState("");
+  const[recipes, setRecipes]= useState([]);
 
   const APP_KEY= 
   "f02974c602160f0bdf45a1ef326d622a";
