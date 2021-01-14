@@ -19,10 +19,10 @@ const getData  = async () => {
 
   return (
     <div className="App">
-      <h1 onClick={getData}>Food Searching App</h1>
-      <form className="Search-Form">
+      <h3>Food Searching App</h3>
+      <form className="search-form">
         <input type="text" placeholder="Search Food" autoComplete="off"/>
-        <input type="submit" value="Search"/>
+        <input type="submit" value="search"/>
       </form>
     </div>
   )
