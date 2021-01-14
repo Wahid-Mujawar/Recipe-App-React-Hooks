@@ -15,12 +15,18 @@ const App = () => {
 const getData  = async () => {
   const result = await Axios.get(url);
   console.log(result)
-}
+};
+
+const onSubmit = (e) => {
+  e.prevent.getData();
+  getData();
+} 
+
 
   return (
     <div className="App">
       <h3>Food Searching App</h3>
-      <form className="search-form">
+      <form className="search-form" onSubmit={onSubmit}>
         <input type="text" placeholder="Search Food" autoComplete="off"/>
         <input type="submit" value="search"/>
       </form>
