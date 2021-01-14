@@ -17,6 +17,7 @@ const App = () => {
 const getData  = async () => {
   const result = await Axios.get(url);
   console.log(result)
+  setQuery("");
 };
 
 
@@ -34,7 +35,7 @@ const onSubmit = (e) => {
     <div className="App">
       <h3>Food Searching App</h3>
       <form className="search-form" onSubmit={onSubmit}>
-        <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} />
+        <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
         <input type="submit" value="search"/>
       </form>
     </div>
