@@ -21,8 +21,14 @@ const App = () => {
 const getData  = async () => {
   if(query !== ""){
   const result = await Axios.get(url);
+
+  if (!result.data.more) {
+    return setAlert("No food with such name");
+  }
+
   console.log(result);
   setRecipes(result.data.hits);
+  setAlert("");
   setQuery("");
   }else {
     setAlert("Please Fill The Form")
@@ -42,7 +48,7 @@ const onSubmit = e => {
     <div className="App">
       <h2>Food Searching App</h2>
       <form className="search-form" onSubmit={onSubmit}>
-        alert !== "" && <Alert alert={alert}/>
+      {alert !== "" && <Alert alert={alert} />}
         <input type="text" placeholder="Search Food" 
         autoComplete="off" onChange={onChange} value={query}/>
         <input type="submit" value="search"/>
