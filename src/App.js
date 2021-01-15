@@ -2,6 +2,7 @@ import React,{ useState } from 'react';
 import './App.css';
 import Axios from 'axios';
 import Recipe from './Components/Recipe';
+import {v4 as uuidv4} from 'uuid';
 
 
 const App = () => {
@@ -39,8 +40,8 @@ const onSubmit = e => {
       </form>
       <div className="recipes">
         {recipes !==[] &&
-          recipes.map(recipe =><Recipe recipe=
-            {recipe}/>)}
+          recipes.map(recipe =><Recipe key={uuidv4()} 
+          recipe = {recipe}/>)}
     </div>
     </div>
   )
