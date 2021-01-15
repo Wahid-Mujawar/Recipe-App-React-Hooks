@@ -5,30 +5,26 @@ import Axios from 'axios';
 
 const App = () => {
   const[query, setQuery] = useState("");
-  const[recipes, setRecipes]= useState([]);
-
-  const APP_KEY= 
-  "f02974c602160f0bdf45a1ef326d622a";
+  const [recipes, setRecipes] = useState([]);
 
   const APP_ID="d3187738";
+  const APP_KEY="f02974c602160f0bdf45a1ef326d622a";
 
   const url =
-`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
 const getData  = async () => {
   const result = await Axios.get(url);
-  setRecipes(result.data.hits);
   console.log(result);
+  setRecipes(result.data.hits);
   setQuery("");
 };
 
 
-const onChange = e => {
-  setQuery(e.target.value)
-};
+const onChange = e => setQuery(e.target.value);
 
-const onSubmit = (e) => {
-  e.prevent.getData();
+const onSubmit = e => {
+  e.preventDefault();
   getData();
 };
 
@@ -42,7 +38,7 @@ const onSubmit = (e) => {
       </form>
       <div className="recipes">
         {recipes !==[] &&
-          recipes.map(recipe => <h2>recipe.recipe.label</h2>)}
+          recipes.map(recipe=> <h2>recipe.recipe.label</h2>)}
     </div>
     </div>
   )
