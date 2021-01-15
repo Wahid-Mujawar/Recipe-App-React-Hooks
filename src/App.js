@@ -5,12 +5,10 @@ import Recipe from './Components/Recipe';
 import {v4 as uuidv4} from 'uuid';
 import Alert from './Components/Alert';
 
-
-
 const App = () => {
   const[query, setQuery] = useState("");
   const[recipes, setRecipes] = useState([]);
-  const[alert, setAlert]=("");
+  const[alert, setAlert]= useState("");
 
   const APP_ID="d3187738";
   const APP_KEY="f02974c602160f0bdf45a1ef326d622a";
