@@ -3,6 +3,8 @@ import './App.css';
 import Axios from 'axios';
 import Recipe from './Components/Recipe';
 import {v4 as uuidv4} from 'uuid';
+import Alert from './Components/Alert';
+
 
 
 const App = () => {
@@ -35,7 +37,8 @@ const onSubmit = e => {
     <div className="App">
       <h3>Food Searching App</h3>
       <form className="search-form" onSubmit={onSubmit}>
-        <input type="text" placeholder="Search Food" autoComplete="off" onChange={onChange} value={query}/>
+        <input type="text" placeholder="Search Food" 
+        autoComplete="off" onChange={onChange} value={query}/>
         <input type="submit" value="search"/>
       </form>
       <div className="recipes">
