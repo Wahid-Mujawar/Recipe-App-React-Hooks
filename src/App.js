@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 const App = () => {
   const[query, setQuery] = useState("");
-  const [recipes, setRecipes] = useState([]);
+  const[recipes, setRecipes] = useState([]);
 
   const APP_ID="d3187738";
   const APP_KEY="f02974c602160f0bdf45a1ef326d622a";
@@ -38,7 +38,7 @@ const onSubmit = e => {
       </form>
       <div className="recipes">
         {recipes !==[] &&
-          recipes.map(recipe=> <h2>recipe.recipe.label</h2>)}
+          recipes.map(recipe => <h2>{recipe.recipe.label}</h2>)}
     </div>
     </div>
   )
