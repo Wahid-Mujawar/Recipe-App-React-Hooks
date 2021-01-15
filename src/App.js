@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import './App.css';
 import Axios from 'axios';
+import Recipe from './Components/Recipe';
 
 
 const App = () => {
@@ -38,7 +39,8 @@ const onSubmit = e => {
       </form>
       <div className="recipes">
         {recipes !==[] &&
-          recipes.map(recipe => <h2>{recipe.recipe.label}</h2>)}
+          recipes.map(recipe =><Recipe recipe=
+            {recipe}/>)}
     </div>
     </div>
   )
