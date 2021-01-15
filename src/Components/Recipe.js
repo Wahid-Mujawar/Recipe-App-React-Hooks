@@ -6,6 +6,12 @@ const Recipe = (recipe) => {
     return (
         <div className="recipe">
             <h2>{label}</h2>
+            <img src={image} alt={label}></img>
+            <a href={url} target="_blank" 
+            rel="noopener noreferrer">
+                URL
+            </a>
+            <button>Ingredients</button>
         </div>
     )
 }
