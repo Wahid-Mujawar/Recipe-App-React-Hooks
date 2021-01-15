@@ -24,6 +24,8 @@ const getData  = async () => {
   console.log(result);
   setRecipes(result.data.hits);
   setQuery("");
+  }else {
+    setAlert("Please Fill The Form")
   }
 };
 
