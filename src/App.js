@@ -10,6 +10,7 @@ import Alert from './Components/Alert';
 const App = () => {
   const[query, setQuery] = useState("");
   const[recipes, setRecipes] = useState([]);
+  const[alert, setAlert]=("");
 
   const APP_ID="d3187738";
   const APP_KEY="f02974c602160f0bdf45a1ef326d622a";
@@ -18,10 +19,12 @@ const App = () => {
 `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
 const getData  = async () => {
+  if(query !== ""){
   const result = await Axios.get(url);
   console.log(result);
   setRecipes(result.data.hits);
   setQuery("");
+  }
 };
 
 
@@ -35,7 +38,7 @@ const onSubmit = e => {
 
   return (
     <div className="App">
-      <h3>Food Searching App</h3>
+      <h2>Food Searching App</h2>
       <form className="search-form" onSubmit={onSubmit}>
         <Alert/>
         <input type="text" placeholder="Search Food" 
