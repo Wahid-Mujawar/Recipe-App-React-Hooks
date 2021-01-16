@@ -19,10 +19,10 @@ html {
   align-items: center;
 }
 
-h2 {
+h1 {
   font-size: 8rem;
   letter-spacing: 0.1rem;
-  color: #075518;
+  color: #1bb13c;
   text-shadow: 0 0.2rem 5rem rgb(68, 57, 57);
   text-transform: uppercase;
   margin: 4rem 0;
@@ -112,7 +112,6 @@ h2 {
   right: 2.5rem;
   font-size: 2.5rem;
   font-weight: 400;
-  text-shadow: 0 0.5rem 0.5rem #555;
   color: #fff;
 }
 
