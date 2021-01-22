@@ -131,6 +131,7 @@ h1 {
   text-transform: uppercase;
   color: #fff;
   background-color: #40b48e;
+  border: none;
 }
 
 .ingredient-list {
