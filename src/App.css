@@ -132,6 +132,7 @@ h1 {
   color: #fff;
   background-color: #40b48e;
   border: none;
+  border-radius: 0.5rem;
 }
 
 .ingredient-list {
