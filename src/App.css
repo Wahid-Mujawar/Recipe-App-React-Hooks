@@ -103,6 +103,7 @@ h1 {
 }
 
 .recipe h2 {
+  background-color: rgba(161, 161, 161, 0.7);
 }
 
 .recipe img {
