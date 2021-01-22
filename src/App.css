@@ -129,6 +129,7 @@ h1 {
 .recipe button {
   font-size: 2rem;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .ingredient-list {
