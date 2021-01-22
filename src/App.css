@@ -133,6 +133,7 @@ h1 {
   background-color: #40b48e;
   border: none;
   border-radius: 0.5rem;
+  height: 3rem;
 }
 
 .ingredient-list {
