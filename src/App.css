@@ -127,6 +127,7 @@ h1 {
 }
 
 .recipe button {
+  font-size: 2rem;
 }
 
 .ingredient-list {
