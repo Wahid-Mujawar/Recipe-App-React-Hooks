@@ -20,9 +20,9 @@ html {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 5rem;
   letter-spacing: 0.1rem;
-  color: #1bb13c;
+  color: #143f1d;
   text-shadow: 0 0.2rem 5rem rgb(68, 57, 57);
   text-transform: uppercase;
   margin: 4rem 0;
@@ -123,7 +123,7 @@ h1 {
 
 .recipe a {
   font-size: 1.8rem;
-  color: #40b48e;
+  color: #4b0404;
 }
 
 .recipe button {
